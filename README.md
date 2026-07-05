@@ -29,3 +29,7 @@ SkillGap is an AI + Data Science Career Intelligence Platform designed to analyz
    - See the matched list ranked automatically by score, highlighting your **Best Fit**!
    - Select a job and click **Analyze Requirements with AI Recruiter** to extract skills on-demand.
    - Interact with the checklist to recalculate your projected score in real-time.
+     
+## Hosted Website
+
+- You can view this application through this link: https://skillgap-3gow.onrender.com/
