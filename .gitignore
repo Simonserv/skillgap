@@ -34,3 +34,6 @@ dist/
 
 # CrewAI memory/cache
 .chromadb/
+
+# User uploads and testing data
+sample_data/
