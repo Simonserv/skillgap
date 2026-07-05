@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillGap — AI & Data Science Career Intelligence</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="glow-bg"></div>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <span class="gradient-text">SkillGap</span>
+            </div>
+            <p class="subtitle">AI & Data Science Career Intelligence Platform</p>
+        </header>
+
+        <!-- Main Grid Layout -->
+        <main class="dashboard-grid">
+            <!-- Left Panel: Upload & Search -->
+            <section class="left-panel">
+                <!-- Step 1: Upload Resume -->
+                <div class="card glass-card upload-section">
+                    <div class="card-header">
+                        <div class="step-num">1</div>
+                        <h3>Upload Resume</h3>
+                    </div>
+                    <div class="upload-dropzone" id="dropzone">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 16V8M12 8L9 11M12 8L15 11" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 15C3 17.8284 3 19.2426 3.87868 20.1213C4.75736 21 6.17157 21 9 21H15C17.8284 21 19.2426 21 20.1213 20.1213C21 19.2426 21 17.8284 21 15" stroke-linecap="round"/>
+                        </svg>
+                        <p class="main-text">Drag & drop your resume PDF</p>
+                        <p class="sub-text">or click to browse files</p>
+                        <input type="file" id="file-input" accept="application/pdf" style="display: none;">
+                    </div>
+                    <div id="upload-status" class="status-box hidden">
+                        <div class="spinner"></div>
+                        <span>Parsing resume with LLM...</span>
+                    </div>
+                    <div id="profile-preview" class="profile-preview hidden">
+                        <div class="profile-meta">
+                            <strong id="profile-name">John Doe</strong>
+                            <span id="profile-email">john@example.com</span>
+                        </div>
+                        <p id="profile-summary">Parsed summary...</p>
+                        <div class="profile-skills-count">
+                            <span id="profile-skills-num">0</span> Skills Identified
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Live Job Ingestion -->
+                <div class="card glass-card search-section disabled" id="search-card">
+                    <div class="card-header">
+                        <div class="step-num">2</div>
+                        <h3>Search Live Job Market</h3>
+                    </div>
+                    <div class="search-bar">
+                        <input type="text" id="search-input" placeholder="e.g. Python Developer, Data Scientist..." disabled>
+                        <button id="search-btn" disabled>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"/>
+                                <path d="M21 21L16.65 16.65"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Search Results -->
+                    <div class="job-list-container">
+                        <div id="job-search-status" class="status-box hidden">
+                            <div class="spinner"></div>
+                            <span>Scanning live remote & local markets...</span>
+                        </div>
+                        <div class="job-list" id="job-list">
+                            <p class="placeholder-text">Upload a resume to begin searching the job market.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Panel: Match Analysis -->
+            <section class="right-panel">
+                <div class="card glass-card match-card" id="match-card">
+                    <div id="match-placeholder" class="match-placeholder-view">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                            <path d="M21 16V8M21 8L18 11M21 8L24 11" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="10" cy="10" r="7"/>
+                            <path d="M15 15L20 20"/>
+                        </svg>
+                        <h3>SkillGap Career Intelligence Report</h3>
+                        <p>Upload a resume and select a job from the market search to calculate your live readiness score and gap analysis.</p>
+                    </div>
+
+                    <!-- Loader during analysis -->
+                    <div id="matching-status" class="status-box hidden">
+                        <div class="spinner"></div>
+                        <span>Calculating JobMatch score (50% Semantic, 35% Skills, 15% Experience)...</span>
+                    </div>
+
+                    <!-- Main Report Content -->
+                    <div id="match-report" class="match-report hidden">
+                        <div class="report-header">
+                            <div>
+                                <h2 id="job-detail-title">Senior Python Developer</h2>
+                                <p id="job-detail-company">Google • Remote</p>
+                            </div>
+                            <div class="source-tag" id="job-detail-source">Remotive</div>
+                        </div>
+
+                        <!-- Match Score Dashboard -->
+                        <div class="score-dashboard">
+                            <!-- Circular Progress Bar -->
+                            <div class="progress-circle-container">
+                                <div class="progress-circle">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="60"></circle>
+                                        <circle cx="70" cy="70" r="60" id="progress-bar"></circle>
+                                    </svg>
+                                    <div class="progress-value">
+                                        <span id="readiness-score-num">0%</span>
+                                        <label>Readiness</label>
+                                    </div>
+                                </div>
+                                <div class="projected-banner hidden" id="projected-badge">
+                                    Projected: <span id="projected-score-num">0%</span>
+                                </div>
+                            </div>
+
+                            <!-- Weight Breakdown -->
+                            <div class="breakdown-list">
+                                <div class="breakdown-item">
+                                    <div class="breakdown-meta">
+                                        <span>Semantic Similarity (50%)</span>
+                                        <strong id="score-semantic">0%</strong>
+                                    </div>
+                                    <div class="progress-bar-bg">
+                                        <div class="progress-bar-fill" id="fill-semantic" style="width: 0%"></div>
+                                    </div>
+                                    <p class="exp-subtext">Measures conceptual alignment between your resume text and the job description using TF-IDF vector meaning, rather than exact keyword matches.</p>
+                                </div>
+                                <div class="breakdown-item">
+                                    <div class="breakdown-meta">
+                                        <span>Skill Matching (35%)</span>
+                                        <strong id="score-skills">0%</strong>
+                                    </div>
+                                    <div class="progress-bar-bg">
+                                        <div class="progress-bar-fill" id="fill-skills" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                <div class="breakdown-item">
+                                    <div class="breakdown-meta">
+                                        <span>Experience Matching (15%)</span>
+                                        <strong id="score-experience">0%</strong>
+                                    </div>
+                                    <div class="progress-bar-bg">
+                                        <div class="progress-bar-fill" id="fill-experience" style="width: 0%"></div>
+                                    </div>
+                                    <p class="exp-subtext" id="exp-explanation">0 yrs vs 0 yrs expected</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Overlapping Skills (Matching) -->
+                        <div class="report-section">
+                            <h3>Overlapping Skills</h3>
+                            <p class="section-desc">You already possess these skills requested in the job description:</p>
+                            <div class="skills-badge-container" id="overlapping-skills-list">
+                                <!-- Green badges will go here -->
+                            </div>
+                        </div>
+
+                        <!-- Interactive Skill Gaps -->
+                        <div class="report-section">
+                            <h3>Bridge the Skill Gaps</h3>
+                            <p class="section-desc">Check the boxes below as you learn or simulate skills to calculate your real-time projected readiness.</p>
+                            
+                            <div class="gaps-container" id="gaps-list">
+                                <!-- Interactive check items will go here -->
+                            </div>
+                        </div>
+
+                        <!-- Timeline Learning Roadmap -->
+                        <div class="report-section">
+                            <h3>Suggested Learning Roadmap</h3>
+                            <div class="roadmap-timeline" id="roadmap-list">
+                                <!-- Milestones -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

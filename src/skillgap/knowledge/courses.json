@@ -1,0 +1,178 @@
+[
+    {
+        "id": "c1_cert",
+        "skill": "python",
+        "title": "Google IT Automation with Python Professional Certificate",
+        "provider": "Coursera (Google)",
+        "duration": "6 months at 10 hours/week",
+        "difficulty": "Beginner",
+        "link": "https://www.coursera.org/professional-certificates/google-it-automation",
+        "free": false,
+        "type": "Certificate"
+    },
+    {
+        "id": "c1_supp",
+        "skill": "python",
+        "title": "Python for Everybody Specialization",
+        "provider": "Coursera (University of Michigan)",
+        "duration": "Approx. 2-3 months",
+        "difficulty": "Beginner",
+        "link": "https://www.coursera.org/specializations/python",
+        "free": true,
+        "type": "Certificate Course"
+    },
+    {
+        "id": "c2_cert",
+        "skill": "docker",
+        "title": "Docker Certified Associate (DCA) Preparation Course",
+        "provider": "KodeKloud",
+        "duration": "12 hours",
+        "difficulty": "Intermediate",
+        "link": "https://kodekloud.com/courses/docker-certified-associate-dca-exam-prep/",
+        "free": false,
+        "type": "Certificate Track"
+    },
+    {
+        "id": "c2_supp",
+        "skill": "docker",
+        "title": "Docker Training Course for Beginners",
+        "provider": "Programming with Mosh",
+        "duration": "1 hour",
+        "difficulty": "Beginner",
+        "link": "https://youtu.be/pTFZFxd4hOI",
+        "free": true,
+        "type": "Supplemental Tutorial"
+    },
+    {
+        "id": "c3_cert",
+        "skill": "aws",
+        "title": "AWS Cloud Technology Consultant Professional Certificate",
+        "provider": "Coursera (AWS)",
+        "duration": "2 months at 10 hours/week",
+        "difficulty": "Beginner",
+        "link": "https://www.coursera.org/professional-certificates/aws-cloud-technology-consultant",
+        "free": false,
+        "type": "Professional Certificate"
+    },
+    {
+        "id": "c3_supp",
+        "skill": "aws",
+        "title": "AWS Certified Cloud Practitioner Ultimate Training",
+        "provider": "freeCodeCamp",
+        "duration": "13 hours",
+        "difficulty": "Beginner",
+        "link": "https://youtu.be/SOTamvahu3A",
+        "free": true,
+        "type": "Supplemental Tutorial"
+    },
+    {
+        "id": "c4_cert",
+        "skill": "kubernetes",
+        "title": "Certified Kubernetes Administrator (CKA) Preparation",
+        "provider": "The Linux Foundation (via edX)",
+        "duration": "15 weeks (self-paced)",
+        "difficulty": "Advanced",
+        "link": "https://www.edx.org/learn/kubernetes/the-linux-foundation-kubernetes-fundamentals",
+        "free": false,
+        "type": "Official Certification Track"
+    },
+    {
+        "id": "c4_supp",
+        "skill": "kubernetes",
+        "title": "Kubernetes Tutorial for Beginners Course",
+        "provider": "TechWorld with Nana",
+        "duration": "3.5 hours",
+        "difficulty": "Intermediate",
+        "link": "https://youtu.be/VnvRFRk_51k",
+        "free": true,
+        "type": "Supplemental Tutorial"
+    },
+    {
+        "id": "c5_cert",
+        "skill": "sql",
+        "title": "Google Data Analytics Professional Certificate (SQL focus)",
+        "provider": "Coursera (Google)",
+        "duration": "6 months at 10 hours/week",
+        "difficulty": "Beginner",
+        "link": "https://www.coursera.org/professional-certificates/google-data-analytics",
+        "free": false,
+        "type": "Professional Certificate"
+    },
+    {
+        "id": "c5_supp",
+        "skill": "sql",
+        "title": "Complete SQL Mastery",
+        "provider": "Programming with Mosh",
+        "duration": "3 hours",
+        "difficulty": "Beginner",
+        "link": "https://youtu.be/7S_tz1z_5bA",
+        "free": true,
+        "type": "Supplemental Tutorial"
+    },
+    {
+        "id": "c6_cert",
+        "skill": "git",
+        "title": "Version Control with Git",
+        "provider": "Coursera (Atlassian)",
+        "duration": "Approx. 13 hours",
+        "difficulty": "Beginner",
+        "link": "https://www.coursera.org/learn/version-control-with-git",
+        "free": true,
+        "type": "Certificate Course"
+    },
+    {
+        "id": "c6_supp",
+        "skill": "git",
+        "title": "Git and GitHub for Beginners - Full Course",
+        "provider": "freeCodeCamp",
+        "duration": "1 hour",
+        "difficulty": "Beginner",
+        "link": "https://youtu.be/RGOj5yH7evk",
+        "free": true,
+        "type": "Supplemental Tutorial"
+    },
+    {
+        "id": "c7_cert",
+        "skill": "react",
+        "title": "Meta Front-End Developer Professional Certificate (React focus)",
+        "provider": "Coursera (Meta)",
+        "duration": "7 months at 6 hours/week",
+        "difficulty": "Beginner",
+        "link": "https://www.coursera.org/professional-certificates/meta-front-end-developer",
+        "free": false,
+        "type": "Professional Certificate"
+    },
+    {
+        "id": "c7_supp",
+        "skill": "react",
+        "title": "React JS Course for Beginners - Mosh",
+        "provider": "Programming with Mosh",
+        "duration": "2.5 hours",
+        "difficulty": "Beginner",
+        "link": "https://youtu.be/Ke90Tje7VS0",
+        "free": true,
+        "type": "Supplemental Tutorial"
+    },
+    {
+        "id": "c8_cert",
+        "skill": "fastapi",
+        "title": "FastAPI Complete Developer Course",
+        "provider": "Udemy",
+        "duration": "8 hours",
+        "difficulty": "Intermediate",
+        "link": "https://www.udemy.com/course/fastapi-the-complete-course/",
+        "free": false,
+        "type": "Certificate of Completion"
+    },
+    {
+        "id": "c9_cert",
+        "skill": "django",
+        "title": "Django for Everybody Specialization",
+        "provider": "Coursera (University of Michigan)",
+        "duration": "Approx. 5 months",
+        "difficulty": "Intermediate",
+        "link": "https://www.coursera.org/specializations/django",
+        "free": true,
+        "type": "Certificate Course"
+    }
+]
